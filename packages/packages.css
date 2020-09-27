@@ -1,0 +1,190 @@
+@font-face{
+
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Regular.ttf") format("truetype");
+    
+    }
+
+@font-face{
+
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Bold.ttf")  format("truetype");
+    font-weight: 700;
+}
+
+main{
+
+padding-top: 2.5rem;
+
+}
+
+.background{
+position: fixed;
+background: url("../images/table.jpeg");
+width: 100vw;
+height: 100vh;
+z-index:-1;
+filter: grayscale(30%);
+}
+
+.package{
+
+background: rgb(112, 187, 192);
+color: black;
+width: 80%;
+margin: 1rem 0;
+border:2px black solid;
+border-left: none;
+position: relative;
+overflow: hidden;
+}
+
+.package:hover,
+.package:active {
+
+box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95);    
+border: rgb(218, 24, 24) 3px solid;
+animation: push-up 1s ease-out forwards;
+}
+
+.package a{
+display: block;
+text-decoration:none;
+color:inherit;
+padding: 2rem;
+
+}
+
+.package__badge{
+
+top:0;
+right: 0;
+padding: 0.5rem;
+margin: 0;
+font-size: 0.9rem;
+position: absolute;
+background: crimson;
+color: white;
+transform: rotate(45deg) translate(3.5rem,-1rem);
+transform-origin: center;
+width: 12rem;
+text-align: center;
+}
+
+.package__subtitle{
+
+color: rgb(87, 78, 78);
+
+}
+
+
+.package__info{
+
+background: white;
+padding: 1rem;
+border: 2px black solid;
+font-size: 1.2rem; 
+}
+
+.clearfix{
+
+clear: both;
+
+}
+
+
+
+#plus{
+
+    background: rgba(124, 224, 230, 0.95);
+
+}
+#free{
+
+background: rgb(182, 230, 240, 0.95);
+float: right;
+border-left: 2px black solid;
+border-right: none;
+text-align: right;
+
+}
+
+#free:hover,
+#free:active{
+    
+
+    border-left-color: rgb(218, 24, 24);
+
+}
+
+#premium{
+
+background: rgba(3, 121, 129, 0.95);
+
+}
+
+#premium .package__title{
+
+color: white;
+
+}
+#premium .package__subtitle{
+
+    color: rgb(49, 48, 48);
+}
+
+
+
+
+@keyframes push-up {
+
+    0%{
+    
+      transform: translateY(0);
+    
+    }
+    
+    33%{
+    
+      transform:  translateY(-1.5rem);
+      
+    }
+    
+    100%{
+    
+      transform:  translateY(-1rem);
+      
+    }}
+
+  @media (min-width : 40rem){
+
+      main {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    
+      }
+  }
+  
+  @media (min-width : 1500px){
+  
+    .package {
+          
+       border-left: 2px black solid;
+    
+      }
+  
+      #free{
+  
+       border-right:2px black solid; 
+  
+      }
+  
+      #free:hover,
+      #free:active{
+      
+  
+      border-right-color: rgb(218, 24, 24);
+  
+  }
+  }
